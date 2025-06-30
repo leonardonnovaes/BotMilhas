@@ -1,0 +1,15 @@
+2025/06/30-16:38:26.203 3ca0 Reusing MANIFEST C:\xampp\htdocs\bot\python\zap\sessao\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/30-16:38:26.206 3ca0 Recovering log #925
+2025/06/30-16:38:26.246 3ca0 Reusing old log C:\xampp\htdocs\bot\python\zap\sessao\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000925.log 
+2025/06/30-16:38:27.613 4358 Level-0 table #931: started
+2025/06/30-16:38:27.690 4358 Level-0 table #931: 1026713 bytes OK
+2025/06/30-16:38:27.701 4358 Delete type=0 #925
+2025/06/30-16:38:27.705 3ca0 Manual compaction at level-0 from ' \x01\x01\x00\x00\x00' @ 72057594037927935 : 1 .. ' \x02\x01\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/30-16:38:28.910 4358 Compacting 1@1 + 2@2 files
+2025/06/30-16:38:28.990 4358 Generated table #932@1: 87172 keys, 2236508 bytes
+2025/06/30-16:38:29.033 4358 Generated table #933@1: 36420 keys, 1530287 bytes
+2025/06/30-16:38:29.033 4358 Compacted 1@1 + 2@2 files => 3766795 bytes
+2025/06/30-16:38:29.034 4358 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/06/30-16:38:29.034 4358 Delete type=2 #927
+2025/06/30-16:38:29.034 4358 Delete type=2 #928
+2025/06/30-16:38:29.034 4358 Delete type=2 #931
