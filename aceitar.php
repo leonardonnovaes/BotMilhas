@@ -35,19 +35,41 @@ if($_SESSION['email']==True){
 <?php
 
 }
+$busca_pedidos = "SELECT * FROM cliente WHERE situacao = 'analise' AND email_painel = '$email_cliente'";
+$resultado_pedidos = mysqli_query($conn, $busca_pedidos);
+$total_pedidos = mysqli_num_rows($resultado_pedidos);
+
+while($dados_pedidos = mysqli_fetch_array($resultado_pedidos)){
+$id_cliente = $dados_pedidos['id'];
+$nome_pedidos = $dados_pedidos['nome'];
+$telefone_pedidos = $dados_pedidos['telefone'];
+$destino = $dados_pedidos['destino_viagem'];
+$ida = $dados_pedidos['data_ida'];
+$volta = $dados_pedidos['data_volta'];
+$qntd_pessoas = $dados_pedidos['quantidade_pessoas'];
+$bagagem_despacho = $dados_pedidos['bagagem_despacho'];
+}
 ?>
 
 <?php
-$id_pedido = $_POST['id_pedido'];
+$id_cliente = $_POST['id_cliente'];
 
-$sql = "UPDATE pedidos SET status = 'aprovado' WHERE id='$id_pedido'";
+
+$sql = "INSERT IGNORE INTO cotacoes_2025 (telefone, nome, destino_viagem, ida, volta, quantidade_pessoas, bagagem_despacho, status)
+VALUES ('$telefone_pedidos', '$nome_pedidos', '$destino', '$ida', '$volta', '$qntd_pessoas', '$bagagem_despacho', 'sucesso');
+";
+$query = mysqli_query($conn, $sql);
+
+
+
+$sql = "DELETE FROM cliente WHERE id='$id_cliente'";
 $query = mysqli_query($conn, $sql);
 if(!$query){
 
     echo "NÃO FOI POSSIVEL ATUALIZAR";
 }else{
 
-    echo "<meta http-equiv='refresh' content='0;url=pedidos.php'>";   
+    echo "<meta http-equiv='refresh' content='0;url=index.php'>";   
 
 }
 

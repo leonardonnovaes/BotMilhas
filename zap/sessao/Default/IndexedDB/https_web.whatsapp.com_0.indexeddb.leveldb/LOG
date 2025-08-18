@@ -1,0 +1,49 @@
+2025/08/18-16:05:26.876 1490 Reusing MANIFEST C:\xampp\htdocs\bot\zap\sessao\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/18-16:05:26.877 1490 Recovering log #137
+2025/08/18-16:05:26.900 1490 Reusing old log C:\xampp\htdocs\bot\zap\sessao\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000137.log 
+2025/08/18-16:05:28.054 3f48 Level-0 table #143: started
+2025/08/18-16:05:28.070 3f48 Level-0 table #143: 904393 bytes OK
+2025/08/18-16:05:28.071 3f48 Delete type=0 #137
+2025/08/18-16:05:28.072 3f48 Manual compaction at level-0 from '\x002\x00\x00\x00' @ 72057594037927935 : 1 .. '\x003\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/08/18-16:05:28.968 1490 Compacting 1@1 + 2@2 files
+2025/08/18-16:05:29.034 1490 Generated table #144@1: 54235 keys, 2355165 bytes
+2025/08/18-16:05:29.045 1490 Generated table #145@1: 10275 keys, 269083 bytes
+2025/08/18-16:05:29.046 1490 Compacted 1@1 + 2@2 files => 2624248 bytes
+2025/08/18-16:05:29.046 1490 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/08/18-16:05:29.046 1490 Delete type=2 #139
+2025/08/18-16:05:29.046 1490 Delete type=2 #140
+2025/08/18-16:05:29.046 1490 Delete type=2 #143
+2025/08/18-16:10:30.280 1f00 Level-0 table #147: started
+2025/08/18-16:10:30.299 1f00 Level-0 table #147: 908323 bytes OK
+2025/08/18-16:10:30.300 1f00 Delete type=0 #142
+2025/08/18-16:10:30.300 3f48 Manual compaction at level-0 from '\x003\x00\x00\x00' @ 72057594037927935 : 1 .. '\x004\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/08/18-16:10:31.231 1490 Compacting 1@1 + 2@2 files
+2025/08/18-16:10:31.294 1490 Generated table #148@1: 53246 keys, 2365612 bytes
+2025/08/18-16:10:31.305 1490 Generated table #149@1: 14538 keys, 395066 bytes
+2025/08/18-16:10:31.305 1490 Compacted 1@1 + 2@2 files => 2760678 bytes
+2025/08/18-16:10:31.306 1490 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/08/18-16:10:31.306 1490 Delete type=2 #144
+2025/08/18-16:10:31.306 1490 Delete type=2 #145
+2025/08/18-16:10:31.306 1490 Delete type=2 #147
+2025/08/18-16:17:07.161 1490 Level-0 table #151: started
+2025/08/18-16:17:07.182 1490 Level-0 table #151: 1318111 bytes OK
+2025/08/18-16:17:07.183 1490 Delete type=0 #146
+2025/08/18-16:17:10.309 1f00 Compacting 1@1 + 2@2 files
+2025/08/18-16:17:10.366 1f00 Generated table #152@1: 53860 keys, 2384926 bytes
+2025/08/18-16:17:10.383 1f00 Generated table #153@1: 18565 keys, 584870 bytes
+2025/08/18-16:17:10.383 1f00 Compacted 1@1 + 2@2 files => 2969796 bytes
+2025/08/18-16:17:10.383 1f00 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/08/18-16:17:10.384 1f00 Delete type=2 #148
+2025/08/18-16:17:10.384 1f00 Delete type=2 #149
+2025/08/18-16:17:10.384 1f00 Delete type=2 #151
+2025/08/18-16:41:52.245 1490 Level-0 table #155: started
+2025/08/18-16:41:52.267 1490 Level-0 table #155: 1340155 bytes OK
+2025/08/18-16:41:52.268 1490 Delete type=0 #150
+2025/08/18-16:41:58.232 1490 Compacting 1@1 + 2@2 files
+2025/08/18-16:41:58.304 1490 Generated table #156@1: 57213 keys, 2406859 bytes
+2025/08/18-16:41:58.323 1490 Generated table #157@1: 19792 keys, 774336 bytes
+2025/08/18-16:41:58.324 1490 Compacted 1@1 + 2@2 files => 3181195 bytes
+2025/08/18-16:41:58.324 1490 compacted to: files[ 0 0 2 0 0 0 0 ]
+2025/08/18-16:41:58.325 1490 Delete type=2 #152
+2025/08/18-16:41:58.325 1490 Delete type=2 #153
+2025/08/18-16:41:58.325 1490 Delete type=2 #155

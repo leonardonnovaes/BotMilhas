@@ -95,7 +95,7 @@ $adm = 0;
       
       body {
         font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
+        background-color: #ddddddff;
       }
       
       form {
@@ -131,6 +131,26 @@ $adm = 0;
       td:first-child {
         font-weight: bold;
       }
+      #button_aceitar{
+        background-color: green;
+        height: 40px;
+        width: 80px;
+        font-weight: bold;
+        border-radius: 20px;
+        margin: 50px;
+        cursor: pointer;
+        border: none;
+      }
+      #button_recusar{
+        background-color: #ff2400;
+        height: 40px;
+        width: 80px;
+        font-weight: bold;
+        border-radius: 20px;
+        margin: 50px;
+        cursor: pointer;
+        border: none;
+      }
     </style>
   </head>
   <body>
@@ -138,24 +158,25 @@ $adm = 0;
 
 <?php
   #$email_cliente= $_SESSION['email'];
-  $busca_pedidos = "SELECT * FROM pedidos WHERE status = 'enviado' AND email_painel = '$email_cliente'";
+  $busca_pedidos = "SELECT * FROM cliente WHERE situacao = 'analise' AND email_painel = '$email_cliente'";
   $resultado_pedidos = mysqli_query($conn, $busca_pedidos);
   $total_pedidos = mysqli_num_rows($resultado_pedidos);
 
   while($dados_pedidos = mysqli_fetch_array($resultado_pedidos)){
-$nome_pedidos = $dados_pedidos['nome_cliente'];
+$id_cliente = $dados_pedidos['id'];
+$nome_pedidos = $dados_pedidos['nome'];
 $telefone_pedidos = $dados_pedidos['telefone'];
-$endereco_pedidos = $dados_pedidos['endereco'];
-$quant_gas_pedidos = $dados_pedidos['quant_gas'];
-$quant_agua_pedidos = $dados_pedidos['quant_agua'];
-$forma_pagamento_pedidos = $dados_pedidos['forma_pagamento'];
-$status_pedidos = $dados_pedidos['status'];
-$data_hora_pedidos = $dados_pedidos['data_hora'];
-$email_painel_pedidos = $dados_pedidos['email_painel'];
+$situacao = $dados_pedidos['situacao'];
+$email_painel = $dados_pedidos['email_painel'];
+$destino = $dados_pedidos['destino_viagem'];
+$ida = $dados_pedidos['data_ida'];
+$volta = $dados_pedidos['data_volta'];
+$qntd_pessoas = $dados_pedidos['quantidade_pessoas'];
+$bagagem_despacho = $dados_pedidos['bagagem_despacho'];
 ?>
 
 
-    <form>
+    <form method="post">
       <h1>Detalhes da venda</h1>
 
      
@@ -171,39 +192,54 @@ $email_painel_pedidos = $dados_pedidos['email_painel'];
         <tr>
           
         <tr>
-          <td>Água Quant.</td>
-          <td><?php echo "$quant_agua_pedidos";?></td>
+          <td>Destino</td>
+          <td><?php echo "$destino";?></td>
         </tr>
         <tr>
-          <td>Gás Quant.</td>
-          <td><?php echo "$quant_gas_pedidos";?></td>
+          <td>Data ida</td>
+          <td><?php echo "$ida";?></td>
         </tr>
         <tr>
-          <td>Data:</td>
-          <td> <?php echo $data_brasil =date('d/m/Y', strtotime($data_hora_pedidos)) ; ?></td>
+          <td>Data volta</td>
+          <td> <?php echo "$volta";?></td>
         </tr>
         <tr>
-          <td>Hora:</td>
-          <td><?php echo $data_brasil =date('H:i:s', strtotime($data_hora_pedidos));?> </td>
+          <td>Quantidade de pessoas</td>
+          <td><?php echo "$qntd_pessoas";?> </td>
         </tr>
         <tr>
-          <td>Forma de pagamento</td>
-          <td><?php echo $forma_pagamento_pedidos;?> </td>
+          <td>Bagagem para despacho</td>
+          <td><?php echo "$bagagem_despacho";?> </td>
         </tr>
         <tr>
-          <td>Valor:</td>
-          <td>R$ <?php
-          $total_gas = $prod_gas * $quant_gas_pedidos;
-          $total_agua = $prod_agua * $quant_agua_pedidos;
-
-
-          $total_gasto = $total_gas + $total_agua;
-          echo $total_gasto ;
-
-          
-          ?></td>
+          <td>situacao</td>
+          <td><?php echo "$situacao";?> </td>
+        </tr>
+        <tr>
+          <td>Email Painel</td>
+          <td><?php echo "$email_painel";?> </td>
+        </tr>
+        <tr>
+          <td>
+            <label>
+              <div align="center">
+                <input type='hidden' name='id_pedido' id='id_pedido'value='<?php  echo $id_cliente?>'/>
+                <input type="submit" name="aceitar" id="button_aceitar" value="SUCESSO" formaction="aceitar.php"  />
+              </div>
+            </label>
+          </td>
+            <td>
+              <label>
+                <div align="center">
+                  <input type='hidden' name='id_cliente' id='id_cliente'value='<?php  echo $id_cliente?>'/>
+                <input type="submit" name="recusar" id="button_recusar" value="FALHA" formaction="recusar.php" />
+                  </button>
+                </div>
+              </label>
+            </td>
         </tr>
       </table>
+      
     </form>
 <br>
 <br>

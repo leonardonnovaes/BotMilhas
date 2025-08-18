@@ -35,10 +35,18 @@ $busca_cliente = "SELECT * FROM cliente WHERE telefone = '$numero_get' AND email
 $cliente = mysqli_query($conn, $busca_cliente);
 $total_cliente = mysqli_num_rows($cliente);
 
+
+
 // Inicializa variáveis com dados do cliente (se existir)
 if ($total_cliente == 1) {
     $dados_cliente = mysqli_fetch_assoc($cliente);
     extract($dados_cliente); // Cria variáveis com base nos nomes das colunas
+    
+}
+if ($situacao == 'analise') {
+    $msg = 'Peço por gentileza que aguarde. Assim que finalizada um de nossos especialistas entrará em contato😊.';
+    $sql = "INSERT INTO envios (telefone, msg , status,usuario) VALUES ('$numero_get','$msg', '1' ,'$usuario_get')";
+    mysqli_query($conn, $sql);
 }
 
 //######################################################################
@@ -46,6 +54,7 @@ if ($total_cliente == 1) {
 if($total_cliente == 0){
     $sql = "INSERT INTO cliente (telefone, email_painel )  VALUES ('$numero_get','$usuario_get')";
     $query = mysqli_query($conn, $sql);
+  
 
     if($query){
         $msg = 'Para começar, me diga seu nome 😊';
@@ -61,6 +70,7 @@ if($nome == NULL){
     $msg_usuario = primeiraLetraMaiuscula($msg_usuario);
     $sql = "UPDATE cliente SET nome = '$msg_usuario' WHERE telefone = '$numero_get'";
     mysqli_query($conn, $sql);
+   
 
     $msg = "Ok *$msg_usuario*, Seja bem-vindo! Me chamo Nane, e vamos continuar 😊. Para onde pretende viajar?";
 
@@ -74,6 +84,7 @@ if($nome == NULL){
 if($destino_viagem == NULL){
     $sql = "UPDATE cliente SET destino_viagem = '$msg_usuario' WHERE telefone = '$numero_get'";
     mysqli_query($conn, $sql);
+   
 
     $msg = "Qual a data de ida? (Formato: AAAA-MM-DD)";
     $sql = "INSERT INTO envios (telefone, msg , status,usuario) VALUES ('$numero_get','$msg', '1','$usuario_get')";
@@ -87,6 +98,7 @@ if($data_ida == NULL){
     if(ehDataValida($msg_usuario)){
         $sql = "UPDATE cliente SET data_ida = '$msg_usuario' WHERE telefone = '$numero_get'";
         mysqli_query($conn, $sql);
+       
 
         $msg = "E qual a data de volta? (Formato: AAAA-MM-DD)";
     } else {
@@ -103,6 +115,7 @@ if($data_volta == NULL){
     if(ehDataValida($msg_usuario)){
         $sql = "UPDATE cliente SET data_volta = '$msg_usuario' WHERE telefone = '$numero_get'";
         mysqli_query($conn, $sql);
+        
 
         $msg = "Quantas pessoas vão viajar?";
     } else {
@@ -119,6 +132,7 @@ if($quantidade_pessoas == NULL){
     if(ehNumero($msg_usuario)){
         $sql = "UPDATE cliente SET quantidade_pessoas = '$msg_usuario' WHERE telefone = '$numero_get'";
         mysqli_query($conn, $sql);
+       
 
         $msg = "Há bagagem para despacho? (Responda com *Sim* ou *Não*)";
     } else {
@@ -136,6 +150,9 @@ if($bagagem_despacho == NULL){
     if($resposta === 'sim' || $resposta === 'não' || $resposta === 'nao'){
         $resposta_formatada = ($resposta === 'nao') ? 'Não' : ucfirst($resposta);
         $sql = "UPDATE cliente SET bagagem_despacho = '$resposta_formatada' WHERE telefone = '$numero_get'";
+        mysqli_query($conn, $sql);
+        
+        $sql = "UPDATE cliente SET situacao = 'analise' WHERE telefone = '$numero_get'";
         mysqli_query($conn, $sql);
 
         $msg = "Obrigado! Todas as informações foram registradas com sucesso. Em breve entraremos em contato para continuar o atendimento. ✈️";
