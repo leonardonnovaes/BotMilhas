@@ -2,7 +2,7 @@
 <html lang="pt" >
 <head>
   <meta charset="UTF-8">
-  <title>DELIVERY</title>
+  <title>NaneMilhas</title>
 
   
 

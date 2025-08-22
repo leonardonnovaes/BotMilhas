@@ -52,106 +52,43 @@ $adm = 0;
 <html lang="pt">
   <head>
   <meta name="author" content="Adtile">
+  <title>NaneMilhas</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-      <link rel="stylesheet" href="css/ie.css">
-    <![endif]-->
+    <link rel="stylesheet" href="./css/index.css">
+  
     <script src="js/responsive-nav.js"></script>
   </head>
   <body>
-
+  <?php
+$paginaAtual = basename($_SERVER['PHP_SELF']);
+?>
     <header>
-      <a href="index.php" class="logo" data-scroll>DELIVERY</a>
+      <a href="index.php" class="logo" data-scroll><img src="./icons/nane-index-bg.png"  height="60" width="70"></a>
       <nav class="nav-collapse">
         <ul>
-          <li class="menu-item active"><a href="index.php" data-scroll>VENDAS</a></li>
-          <li class="menu-item"><a href="produtos.php" data-scroll>PRODUTOS</a></li>
-          <li class="menu-item"><a href="pedidos.php" data-scroll>PEDIDOS</a></li>
-          <li class="menu-item"><a href="config.php" data-scroll>CONFIGURAÇÕES</a></li>
-          <?php
-          if($tipo_cliente == 2){
-            ?>
-             
-          <li class="menu-item"><a href="admin.php" data-scroll>ADMIN</a></li>      
-          <?php
-          }
-          ?>
-          <li class="menu-item"><a href="sair.php" data-scroll>SAIR</a></li>
-    
-        </ul>
+  <li class="menu-item <?= ($paginaAtual == 'index.php') ? 'active' : '' ?>">
+    <a href="index.php" data-scroll>PENDENTES</a>
+  </li>
+  <li class="menu-item <?= ($paginaAtual == 'produtos.php') ? 'active' : '' ?>">
+    <a href="produtos.php" data-scroll>ACEITAS</a>
+  </li>
+  <li class="menu-item <?= ($paginaAtual == 'pedidos.php') ? 'active' : '' ?>">
+    <a href="pedidos.php" data-scroll>RECUSADAS</a>
+  </li>
+  <li class="menu-item <?= ($paginaAtual == 'config.php') ? 'active' : '' ?>">
+    <a href="config.php" data-scroll>CONFIGURAÇÕES</a>
+  </li>
+  <li class="menu-item <?= ($paginaAtual == 'sair.php') ? 'active' : '' ?>">
+    <a href="sair.php" data-scroll>SAIR</a>
+  </li>
+</ul>
+
       </nav>
     </header>
 
     <section id="home">
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #ddddddff;
-      }
-      
-      form {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        max-width: 500px;
-        margin: 0 auto;
-      }
-      
-      h1 {
-        margin-bottom: 10px;
-      }
-      
-      table {
-        width: 100%;
-        margin-top: 10px;
-        border-collapse: collapse;
-      }
-      
-      th,
-      td {
-        padding: 10px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
-      
-      th {
-        background-color: #eee;
-      }
-      
-      td:first-child {
-        font-weight: bold;
-      }
-      #button_aceitar{
-        background-color: green;
-        height: 40px;
-        width: 80px;
-        font-weight: bold;
-        border-radius: 20px;
-        margin: 50px;
-        cursor: pointer;
-        border: none;
-      }
-      #button_recusar{
-        background-color: #ff2400;
-        height: 40px;
-        width: 80px;
-        font-weight: bold;
-        border-radius: 20px;
-        margin: 50px;
-        cursor: pointer;
-        border: none;
-      }
-    </style>
+    
   </head>
   <body>
 
@@ -224,7 +161,7 @@ $bagagem_despacho = $dados_pedidos['bagagem_despacho'];
             <label>
               <div align="center">
                 <input type='hidden' name='id_pedido' id='id_pedido'value='<?php  echo $id_cliente?>'/>
-                <input type="submit" name="aceitar" id="button_aceitar" value="SUCESSO" formaction="aceitar.php"  />
+                <input type="submit" name="aceitar" id="button_aceitar" value="✅" formaction="aceitar.php"  />
               </div>
             </label>
           </td>
@@ -232,7 +169,7 @@ $bagagem_despacho = $dados_pedidos['bagagem_despacho'];
               <label>
                 <div align="center">
                   <input type='hidden' name='id_cliente' id='id_cliente'value='<?php  echo $id_cliente?>'/>
-                <input type="submit" name="recusar" id="button_recusar" value="FALHA" formaction="recusar.php" />
+                <input type="submit" name="recusar" id="button_recusar" value="❌" formaction="recusar.php" />
                   </button>
                 </div>
               </label>
