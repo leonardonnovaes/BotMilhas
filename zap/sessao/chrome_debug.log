@@ -1,7 +1,6 @@
-[7884:13816:0827/153227.722:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
-[16652:9112:0827/153227.850:ERROR:ui\gl\direct_composition_support.cc:615] AMD VideoProcessorGetOutputExtension failed: Parâmetro incorreto. (0x80070057)
-[7884:13816:0827/153228.453:INFO:CONSOLE:114] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yV/r/ZzGKWrJoZkY.js (114)
-[7884:19168:0827/153235.500:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
-[7884:13816:0827/153236.014:INFO:CONSOLE:114] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yV/r/ZzGKWrJoZkY.js (114)
-[7884:19168:0827/153304.897:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
-[7884:19168:0827/153350.037:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[12724:1824:0827/161105.848:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[14592:14848:0827/161105.964:ERROR:ui\gl\direct_composition_support.cc:615] AMD VideoProcessorGetOutputExtension failed: Parâmetro incorreto. (0x80070057)
+[12724:1824:0827/161106.541:INFO:CONSOLE:114] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yV/r/ZzGKWrJoZkY.js (114)
+[12724:18560:0827/161110.561:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[12724:18560:0827/161138.017:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[12724:18560:0827/161218.882:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: QUOTA_EXCEEDED
