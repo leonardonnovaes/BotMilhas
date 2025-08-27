@@ -3,7 +3,9 @@ session_start();
 require_once('conn.php');
 error_reporting(0);
 ini_set("display_errors",0);
-
+date_default_timezone_set('America/Sao_Paulo');
+$now = time();
+$data_hora = date('Y-m-d H:i:s', $now);
 
 
 
@@ -55,8 +57,8 @@ $bagagem_despacho = $dados_pedidos['bagagem_despacho'];
 $id_cliente = $_POST['id_cliente'];
 
 
-$sql = "INSERT IGNORE INTO cotacoes_2025 (telefone, nome, destino_viagem, ida, volta, quantidade_pessoas, bagagem_despacho, status)
-VALUES ('$telefone_pedidos', '$nome_pedidos', '$destino', '$ida', '$volta', '$qntd_pessoas', '$bagagem_despacho', 'recusado');
+$sql = "INSERT IGNORE INTO cotacoes_2025 (telefone, nome, destino_viagem, ida, volta, quantidade_pessoas, bagagem_despacho, status, data_hora)
+VALUES ('$telefone_pedidos', '$nome_pedidos', '$destino', '$ida', '$volta', '$qntd_pessoas', '$bagagem_despacho', 'recusado','$data_hora');
 ";
 $query = mysqli_query($conn, $sql);
 

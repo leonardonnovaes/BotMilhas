@@ -1,17 +1,17 @@
-2025/08/27-14:56:07.873 3714 Reusing MANIFEST C:\xampp\htdocs\bot\zap\sessao\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2025/08/27-14:56:07.874 3714 Recovering log #305
-2025/08/27-14:56:07.893 3714 Reusing old log C:\xampp\htdocs\bot\zap\sessao\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000305.log 
-2025/08/27-14:56:09.556 4238 Level-0 table #312: started
-2025/08/27-14:56:09.570 4238 Level-0 table #312: 757263 bytes OK
-2025/08/27-14:56:09.571 4238 Delete type=0 #305
-2025/08/27-14:56:09.571 3714 Manual compaction at level-0 from '\x00O\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00P\x00\x00\x00' @ 0 : 0; will stop at (end)
-2025/08/27-14:56:10.522 4238 Compacting 1@1 + 3@2 files
-2025/08/27-14:56:10.598 4238 Generated table #313@1: 86995 keys, 2235881 bytes
-2025/08/27-14:56:10.653 4238 Generated table #314@1: 30412 keys, 2495477 bytes
-2025/08/27-14:56:10.675 4238 Generated table #315@1: 24526 keys, 705188 bytes
-2025/08/27-14:56:10.675 4238 Compacted 1@1 + 3@2 files => 5436546 bytes
-2025/08/27-14:56:10.676 4238 compacted to: files[ 0 0 3 0 0 0 0 ]
-2025/08/27-14:56:10.676 4238 Delete type=2 #307
-2025/08/27-14:56:10.676 4238 Delete type=2 #308
-2025/08/27-14:56:10.676 4238 Delete type=2 #309
-2025/08/27-14:56:10.676 4238 Delete type=2 #312
+2025/08/27-15:32:28.464 495c Reusing MANIFEST C:\xampp\htdocs\bot\zap\sessao\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/08/27-15:32:28.465 495c Recovering log #340
+2025/08/27-15:32:28.468 495c Reusing old log C:\xampp\htdocs\bot\zap\sessao\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000340.log 
+2025/08/27-15:32:29.697 6b0 Level-0 table #347: started
+2025/08/27-15:32:29.700 6b0 Level-0 table #347: 149559 bytes OK
+2025/08/27-15:32:29.701 6b0 Delete type=0 #340
+2025/08/27-15:32:29.701 40a4 Manual compaction at level-0 from '\x00U\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00V\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/08/27-15:32:30.600 495c Compacting 1@1 + 3@2 files
+2025/08/27-15:32:30.656 495c Generated table #348@1: 86574 keys, 2235069 bytes
+2025/08/27-15:32:30.698 495c Generated table #349@1: 36998 keys, 2524879 bytes
+2025/08/27-15:32:30.729 495c Generated table #350@1: 33140 keys, 1185520 bytes
+2025/08/27-15:32:30.729 495c Compacted 1@1 + 3@2 files => 5945468 bytes
+2025/08/27-15:32:30.731 495c compacted to: files[ 0 0 3 0 0 0 0 ]
+2025/08/27-15:32:30.731 495c Delete type=2 #342
+2025/08/27-15:32:30.731 495c Delete type=2 #343
+2025/08/27-15:32:30.731 495c Delete type=2 #344
+2025/08/27-15:32:30.731 495c Delete type=2 #347

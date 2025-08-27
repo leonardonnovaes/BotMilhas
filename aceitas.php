@@ -17,9 +17,6 @@ $senha_cliente= $dados_usuario['senha'];
 $nome_cliente= $dados_usuario['nome'];
 $tipo_cliente= $dados_usuario['tipo'];
 
-$prod_gas = $dados_usuario['prod_gas'];
-$prod_agua= $dados_usuario['prod_agua'];
-
 
   }
 
@@ -109,6 +106,7 @@ $ida = $dados_pedidos['ida'];
 $volta = $dados_pedidos['volta'];
 $qntd_pessoas = $dados_pedidos['quantidade_pessoas'];
 $bagagem_despacho = $dados_pedidos['bagagem_despacho'];
+$data_hora = $dados_pedidos['data_hora'];
 ?>
 
 
@@ -150,6 +148,10 @@ $bagagem_despacho = $dados_pedidos['bagagem_despacho'];
         <tr>
           <td>situacao</td>
           <td><?php echo "$situacao";?> </td>
+        </tr>
+         <tr>
+          <td>finalizado em</td>
+          <td><?php echo "$data_hora";?> </td>
         </tr>
       </table>
       
