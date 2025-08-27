@@ -66,11 +66,11 @@ $paginaAtual = basename($_SERVER['PHP_SELF']);
   <li class="menu-item <?= ($paginaAtual == 'index.php') ? 'active' : '' ?>">
     <a href="index.php" data-scroll>PENDENTES</a>
   </li>
-  <li class="menu-item <?= ($paginaAtual == 'produtos.php') ? 'active' : '' ?>">
-    <a href="produtos.php" data-scroll>ACEITAS</a>
+  <li class="menu-item <?= ($paginaAtual == 'aceitas.php') ? 'active' : '' ?>">
+    <a href="aceitas.php" data-scroll>ACEITAS</a>
   </li>
-  <li class="menu-item <?= ($paginaAtual == 'pedidos.php') ? 'active' : '' ?>">
-    <a href="pedidos.php" data-scroll>RECUSADAS</a>
+  <li class="menu-item <?= ($paginaAtual == 'recusadas.php') ? 'active' : '' ?>">
+    <a href="recusadas.php" data-scroll>RECUSADAS</a>
   </li>
   <li class="menu-item <?= ($paginaAtual == 'config.php') ? 'active' : '' ?>">
     <a href="config.php" data-scroll>CONFIGURAÇÕES</a>

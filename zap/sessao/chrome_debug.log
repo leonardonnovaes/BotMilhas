@@ -1,10 +1,7 @@
-[10756:10700:0822/155251.401:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
-[2924:11708:0822/155251.982:ERROR:ui\gl\direct_composition_support.cc:615] AMD VideoProcessorGetOutputExtension failed: Parâmetro incorreto. (0x80070057)
-[10756:10700:0822/155254.976:INFO:CONSOLE:114] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/y9/r/e4o8-bPHwE7.js (114)
-[2924:5992:0822/155256.529:WARNING:ui\gl\angle_platform_impl.cc:52] HLSLCompiler.cpp:250 (rx::HLSLCompiler::compileToBinary): 
-C:\fakepath(179,3-70): warning X3557: loop only executes for 1 iteration(s), forcing loop to unroll
-
-[10756:6920:0822/155300.447:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
-[10756:10700:0822/155300.703:INFO:CONSOLE:114] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yd/r/7vqOCuev2JX.js (114)
-[10756:10700:0822/155302.862:WARNING:content\browser\download\download_manager_impl.cc:703] A download with the same GUID already exists, the new request is ignored.
-[10756:6920:0822/155326.009:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[5996:13896:0827/145607.114:INFO:components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc:202] No machine level policy manager exists.
+[18204:16256:0827/145607.313:ERROR:ui\gl\direct_composition_support.cc:615] AMD VideoProcessorGetOutputExtension failed: Parâmetro incorreto. (0x80070057)
+[5996:13896:0827/145607.858:INFO:CONSOLE:114] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yl/r/6Rub1Dwueza.js (114)
+[5996:3164:0827/145610.978:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[5996:13896:0827/145611.375:INFO:CONSOLE:114] "Event handler of 'x-storagemutated-1' event must be added on the initial evaluation of worker script.", source: https://static.whatsapp.net/rsrc.php/v4/yi/r/K7sEURx8Kj-.js (114)
+[5996:3164:0827/145635.783:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[5996:3164:0827/145730.104:ERROR:google_apis\gcm\engine\registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
