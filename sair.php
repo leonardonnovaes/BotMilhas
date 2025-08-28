@@ -5,6 +5,6 @@ session_destroy();
 
 
 
-<title>DELIVERY</title>
+<title>NaneMilhas</title>
 
 <meta http-equiv="refresh" content="0; url=login.php" />
